@@ -28,7 +28,7 @@ const products = [{
     price: 15000,
     originalPrice: 22000,
     category: "coconut",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-5/files/20241006-2215_d5fba1ad042c05da833c58e5ea595ecf.jpg"
   },
   {
     id: 5,
@@ -36,7 +36,7 @@ const products = [{
     price: 15000,
     originalPrice: 25000,
     category: "coconut",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-5/files/20241006-2217_400bbcd2bc80c56ca5fe048f01ee0f84.jpg"
   },
   {
     id: 6,
@@ -44,7 +44,7 @@ const products = [{
     price: 15000,
     originalPrice: 22000,
     category: "coconut",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-11/files/20241006-2218_59eb8eeb7fb00e272c83146607c2cdfd.jpg"
   },
   {
     id: 7,
@@ -52,7 +52,7 @@ const products = [{
     price: 15000,
     originalPrice: 24000,
     category: "coconut",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-2/files/20241006-2218_13740ce222dd520a1cda40117865c814.jpg"
   },
   {
     id: 8,
@@ -60,7 +60,7 @@ const products = [{
     price: 15000,
     originalPrice: 28000,
     category: "cloud",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-10/files/20241006-2219_ca4d38ae352128b63b11107a6479dae0.jpg"
   },
   {
     id: 9,
@@ -68,7 +68,7 @@ const products = [{
     price: 15000,
     originalPrice: 28000,
     category: "cloud",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-6/files/20241006-2219_a24fb935743ee515d849e9798e79a1f0.jpg"
   },
   {
     id: 10,
@@ -76,7 +76,7 @@ const products = [{
     price: 15000,
     originalPrice: 25000,
     category: "cloud",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-11/files/20241006-2220_e58e87f82fe774c51bc3121e9e08979d.png"
   },
   {
     id: 11,
