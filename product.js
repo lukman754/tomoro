@@ -92,7 +92,7 @@ const products = [{
     price: 15000,
     originalPrice: 24000,
     category: "coffee",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-9/files/20241006-2144_15565673d25e432514f5b133e67f390f.jpg"
   },
   {
     id: 13,
@@ -100,7 +100,7 @@ const products = [{
     price: 15000,
     originalPrice: 30000,
     category: "coffee",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-5/files/20241006-2145_f95c87d0e66f3e6b381a0641c480a415.jpg"
   },
   {
     id: 14,
@@ -108,7 +108,7 @@ const products = [{
     price: 15000,
     originalPrice: 24000,
     category: "coffee",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-12/files/20241006-2146_b84dcc85bc77e3f1cb758132fb248301.jpg"
   },
   {
     id: 15,
@@ -116,7 +116,7 @@ const products = [{
     price: 15000,
     originalPrice: 18000,
     category: "coffee",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-5/files/20241006-2146_ae1034d261991c097e67851c0d7a033d.jpg"
   },
   {
     id: 16,
@@ -124,7 +124,7 @@ const products = [{
     price: 15000,
     originalPrice: 30000,
     category: "coffee",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-3/files/20241006-2147_9d554c9aa0a1e175ed26bde8e5744f4d.jpg"
   },
   {
     id: 17,
@@ -132,7 +132,7 @@ const products = [{
     price: 15000,
     originalPrice: 24000,
     category: "coffee",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-12/files/20241006-2149_c0002dc6437ac38c8d53141874c3ca2f.jpg"
   },
   {
     id: 18,
@@ -140,7 +140,7 @@ const products = [{
     price: 15000,
     originalPrice: 25000,
     category: "coffee",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-3/files/20241006-2150_68065c067154100d4dae87db2a816a81.jpg"
   },
   {
     id: 19,
@@ -148,7 +148,7 @@ const products = [{
     price: 15000,
     originalPrice: 24000,
     category: "coffee",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-3/files/20241006-2147_9d554c9aa0a1e175ed26bde8e5744f4d.jpg"
   },
   {
     id: 20,
@@ -156,7 +156,7 @@ const products = [{
     price: 15000,
     originalPrice: 25000,
     category: "coffee",
-    image: "#"
+    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-11/files/20241006-2150_d8f4c19159b2192145a0b17c42411de5.jpg"
   }
 
 ];
