@@ -40,11 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 productElement.innerHTML = `
                 <div class="row align-items-center mb-3">
-                    <div class="col-4 col-lg-2">
+                    <div class="col-3 col-lg-2">
                         <img src="${product.image}" alt="${product.name}" class="product-image" style="width: 80px; height: 80px" />
                     </div>
-                    <div class="col-6 col-lg-8">
-                        <h5 class="fs-5">${product.name}</h5>
+                    <div class="col-7 col-lg-8">
+                        <h5 class="fs-5 pt-2">${product.name}</h5>
                         ${priceDisplay}
                     </div>
                     <div class="col-2 d-flex justify-content-end align-items-end">
