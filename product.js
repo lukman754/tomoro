@@ -84,7 +84,7 @@ const products = [{
     price: 15000,
     originalPrice: 20000,
     category: "coffee",
-    image: "#"
+    image: "https://drive.google.com/file/d/108WBXkSv0I3OmuJgEF_FKhZkjA7PWFt8/view?usp=drivesdk"
   },
   {
     id: 12,
