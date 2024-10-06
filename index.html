@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+  </script>
+  <script src="https://kit.fontawesome.com/8c8ccf764d.js" crossorigin="anonymous"></script>
+
+  <script src="product.js"></script>
+  <link rel="icon" href="icon.jpg">
+  <title>Tomoro Coffee 15K</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="icon.jpg" alt="Logo" width="30" height="30" class="d-inline-block rounded align-text-top">
+          Tomoro Coffee 15K
+        </a>
+      </div>
+    </nav>
+    <div class="bg-light border-bottom py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <strong>Syarat & Ketentuan:</strong>
+            <ul class="mb-0" style="font-size: 10pt; line-height: 1.6;">
+              <li>Promo hanya berlaku untuk ukuran Regular</li>
+              <li>Promo hanya berlaku untuk pembelian Pickup (Tidak bisa Delivery)</li>
+              <li>Promo hanya berlaku untuk menu yang ada di katalog</li>
+              <li>Promo berlaku di semua outlet Tomoro</li>
+            </ul>
+          </div>
+          <div class="col-12 pt-2">
+            <h5>
+              <a class="btn btn-link px-2 fw-bold p-0 text-decoration-none" data-bs-toggle="collapse"
+                href="#collapseOrder" role="button" aria-expanded="false" aria-controls="collapseOrder">
+                Cara Pemesanan <i class="fas fa-eye"></i>
+              </a>
+            </h5>
+
+            <div class="collapse" id="collapseOrder">
+              <div class="card card-body">
+                <ol style="font-size: 11pt;">
+                  <li><strong>Pilih Produk:</strong> Pilih produk di katalog LM Store dan isi detail pesanan (nama dan
+                    lokasi outlet).</li>
+                  <li><strong>Pembayaran:</strong> Lakukan pembayaran sesuai dengan total harga yang tertera dan kirim
+                    bukti pembayaran.</li>
+                  <li><strong>Proses Order:</strong> Pesanan diteruskan ke outlet yang dipilih atas nama pembeli.</li>
+                  <li><strong>Pickup:</strong> Setelah siap, pembeli dapat melakukan pickup di outlet yang ditentukan.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <header class="w-100 ">
+      <form class="mb-2" role="search"></form>
+      <input id="search" class="form-control mb-2" type="search" placeholder="Search" aria-label="Search" />
+      </form>
+      <div class="dropdown mb-3 w-100 text-light">
+        <button class="btn btn-dark dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          Kategori
+        </button>
+
+
+
+        <ul class="filters dropdown-menu w-100 bg-dark">
+          <li><button class="category" data-filter="*"><span>SEMUA</span></button></li>
+          <li><button class="category" data-filter=".cheese"><span>🧀 CHEESE LATTE SERIES</span>&nbsp;<span
+                class="badge small bg-warning text-dark">New</span></button></li>
+          <li><button class="category" data-filter=".coffee"><span>☕ COFFEE</span></button></li>
+          <li><button class="category" data-filter=".noncoffee"><span>🍵 NON COFFEE</span></button></li>
+          <li><button class="category" data-filter=".peach"><span>🍑 PEACH SERIES</span></button></li>
+          <li><button class="category" data-filter=".shaken"><span>🥛 ICE SHAKEN SERIES</span></button></li>
+          <li><button class="category" data-filter=".cloud"><span>☁️ CLOUD SERIES</span></button></li>
+          <li><button class="category" data-filter=".coconut"><span>🥥 COCONUT SERIES</span></button></li>
+          <li><button class="category" data-filter=".oatside"><span>🌾 OATSIDE SERIES</span></button></li>
+          <li><button class="category" data-filter=".americano"><span>🥃 AMERICANO SERIES</span></button></li>
+          <li><button class="category" data-filter=".frappe"><span>🧋 FRAPPE SERIES</span></button></li>
+        </ul>
+
+
+
+      </div>
+      <a href="#cart" class="cart-bubble">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+
+    </header>
+
+    <main>
+      <div class="product-list m-2" id="product-list">
+        <div class="row align-items-center">
+
+        </div>
+      </div>
+
+  </div>
+  </main>
+
+  <aside class="container bg-dark rounded-top text-white">
+    <div class="cart p-2 mt-4 rounded small">
+      <h4 class="pt-2">Keranjang</h4>
+      <div class="w-100 bg-transparent p-2 mb-1 pb-0" id="cart"></div>
+      <p class="bg-secondary text-white p-2 rounded float-end w-100 mt-1 rounded d-flex justify-content-between">
+        <span>Total :</span>
+        <span id="total">Rp0</span>
+      </p>
+
+
+
+      <form id="order-form">
+        <input type="text" class="w-100 form-control form-control-sm  border-1 mb-2" placeholder="Nama" id="name"
+          required />
+        <input type="text" class="w-100 form-control form-control-sm  border-1 mb-2" placeholder="Lokasi Tomoro"
+          id="location" required />
+        <button type="submit" class="btn btn-success rounded-pill btn-sm mb-3">Pesan Sekarang</button>
+      </form>
+
+    </div>
+
+  </aside>
+  <!-- HTML -->
+  <footer class="bg-dark text-light pb-4" style="text-align: center;">
+    <p style="font-size: 16px;">LM Store</p>
+  </footer>
+
+  <!-- Add FontAwesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
