@@ -306,5 +306,21 @@ const products = [{
     originalPrice: 17000,
     category: "noncoffee",
     image: "https://i.im.ge/2024/10/07/k0r7k9.3-20241007-093420-0002.png"
-  }
+  },
+  {
+    id: 39,
+    name: "Vanilla Espresso Shaken",
+    price: 15000,
+    originalPrice: 26000,
+    category: "shaken",
+    image: "https://i.im.ge/2024/10/07/k0UvA9.Screenshot-2024-10-07-17-48-31-885-com-tomoro-indonesia-android.png"
+  },
+  {
+    id: 40,
+    name: "Caramel Espresso Shaken",
+    price: 15000,
+    originalPrice: 26000,
+    category: "shaken",
+    image: "https://i.im.ge/2024/10/07/k0UvA9.Screenshot-2024-10-07-17-48-31-885-com-tomoro-indonesia-android.png"
+  },
 ];
