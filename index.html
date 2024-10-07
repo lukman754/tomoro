@@ -21,7 +21,7 @@
   <div class="container">
     <nav class="navbar">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" id="top" href="#">
           <img src="icon.jpg" alt="Logo" width="30" height="30" class="d-inline-block rounded align-text-top">
           Tomoro Coffee 15K
         </a>
@@ -65,48 +65,45 @@
       </div>
     </div>
     <header class="w-100 ">
-        <div class="tags">
-          <div class="tag product small matcha">Matcha</div>
-          <div class="tag product small oat">Oat</div>
-          <div class="tag product small latte">Latte</div>
-          <div class="tag product small aren">Aren</div>
-          <div class="tag product small choco">Choco</div>
-          <div class="tag product small americano">Americano</div>
-        </div>
-
       <form class="mb-2" role="search">
-        <input id="search" class="form-control mb-2" type="search" placeholder="Search" aria-label="Search" />
+        <input id="search" class="form-control rounded-pill mt-2 " type="search" placeholder="Search"
+          aria-label="Search" />
       </form>
-      <div class="dropdown mb-3 w-100 text-light">
-        <button class="btn btn-dark dropdown-toggle w-100" type="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
-          Kategori
-        </button>
-
-
-
-        <ul class="filters dropdown-menu w-100 bg-dark">
-          <li><button class="category" data-filter="*"><span>SEMUA</span></button></li>
-          <li><button class="category" data-filter=".cheese"><span>🧀 CHEESE LATTE SERIES</span>&nbsp;<span
-                class="badge small bg-warning text-dark">New</span></button></li>
-          <li><button class="category" data-filter=".coffee"><span>☕ COFFEE</span></button></li>
-          <li><button class="category" data-filter=".noncoffee"><span>🍵 NON COFFEE</span></button></li>
-          <li><button class="category" data-filter=".peach"><span>🍑 PEACH SERIES</span></button></li>
-          <li><button class="category" data-filter=".shaken"><span>🥛 ICE SHAKEN SERIES</span></button></li>
-          <li><button class="category" data-filter=".cloud"><span>☁️ CLOUD SERIES</span></button></li>
-          <li><button class="category" data-filter=".coconut"><span>🥥 COCONUT SERIES</span></button></li>
-          <li><button class="category" data-filter=".oatside"><span>🌾 OATSIDE SERIES</span></button></li>
-          <li><button class="category" data-filter=".americano"><span>🥃 AMERICANO SERIES</span></button></li>
-          <li><button class="category" data-filter=".frappe"><span>🧋 FRAPPE SERIES</span></button></li>
-        </ul>
-
-
-
+      <div class="tags mb-0">
+        <div class="tag rounded-pill me-2 p-1 px-2 matcha">Matcha</div>
+        <div class="tag rounded-pill me-2 p-1 px-2 choco">Choco</div>
+        <div class="tag rounded-pill me-2 p-1 px-2 aren">Aren</div>
+        <div class="tag rounded-pill me-2 p-1 px-2 latte">Latte</div>
+        <div class="tag rounded-pill me-2 p-1 px-2 americano">Americano</div>
+        <div class="tag rounded-pill me-2 p-1 px-2 oat">Oat</div>
       </div>
+
+
+      <div class="filters categories-wrapper d-flex flex-nowrap overflow-auto py-2">
+        <button class="btn btn-dark rounded-pill me-2 category active" data-filter="*"><span>⭐ SEMUA</span></button>
+        <button class="btn btn-dark rounded-pill me-2 category" data-filter=".cheese"><span>🧀 CHEESE LATTE
+            SERIES</span></button>
+        <button class="btn btn-dark rounded-pill me-2 category" data-filter=".coffee"><span>☕ COFFEE</span></button>
+        <button class="btn btn-dark rounded-pill me-2 category" data-filter=".noncoffee"><span>🍵 NON
+            COFFEE</span></button>
+        <button class="btn btn-dark rounded-pill me-2 category" data-filter=".peach"><span>🍑 PEACH
+            SERIES</span></button>
+        <button class="btn btn-dark rounded-pill me-2 category" data-filter=".shaken"><span>🥛 ICE SHAKEN
+            SERIES</span></button>
+        <button class="btn btn-dark rounded-pill me-2 category" data-filter=".cloud"><span>☁️ CLOUD
+            SERIES</span></button>
+        <button class="btn btn-dark rounded-pill me-2 category" data-filter=".coconut"><span>🥥 COCONUT
+            SERIES</span></button>
+        <button class="btn btn-dark rounded-pill me-2 category" data-filter=".frappe"><span>🧋 FRAPPE
+            SERIES</span></button>
+      </div>
+
+
       <a href="#cart" class="cart-bubble">
-        <i class="fas fa-shopping-cart p-2"></i>
+        <i class="fas fa-shopping-cart p-1"></i>
         <span id="cart-count">0</span>
       </a>
+      <a href="#top" class="arrow-up"><i class="fas fa-angle-up p-1"></i></a>
 
     </header>
 
