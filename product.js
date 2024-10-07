@@ -20,7 +20,7 @@ const products = [{
     price: 15000,
     originalPrice: 26000,
     category: "cheese",
-    image: "https://s3.ap-northeast-1-ntt.wasabisys.com/ak1520d-filenow-2/files/20241006-1646_c0dc53da26a601b442b409626fc3b841.jpg"
+    image: "https://i.im.ge/2024/10/07/k00ioy.Screenshot-2024-10-05-02-49-11-198-com-tomoro-indonesia-androie.png"
   },
 
   {
