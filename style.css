@@ -101,27 +101,28 @@ h2 {
     background-color: #ddd;
 }
 
-.matcha{
+header .tags{
+header .tags .matcha {
     background-color: #658147;
     color: white;
 }
 
-.oat{
+header .tags .oat {
     background-color: #F6DCAC;
     color: #603F26;
 }
 
-.latte{
+header .tags .latte {
     background-color: #914F1E;
     color: white;
 }
 
-.choco{
+header .tags .choco {
     background-color: #603F26;
     color: white;
 }
 
-.americano{
+header .tags .americano {
     background-color: #8D493A;
     color: white;
 }
