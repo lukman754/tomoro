@@ -122,27 +122,32 @@ header .tags .matcha {
 }
 
 header .tags .oat {
-    background-color: #F6DCAC;
+    background-color: #E0C097;
     color: #603F26;
 }
 
 header .tags .latte {
-    background-color: #914F1E;
+    background-color: #5C3D2E;
     color: white;
 }
 
 header .tags .aren {
-    background-color: #91371e;
+    background-color: #B85C38;
     color: white;
 }
 
 header .tags .choco {
-    background-color: #603F26;
+    background-color: #2D2424;
     color: white;
 }
 
 header .tags .americano {
-    background-color: #8D493A;
+    background-color: #6B240C;
+    color: white;
+}
+
+header .tags .caramel {
+    background-color: #994D1C;
     color: white;
 }
 
@@ -155,6 +160,8 @@ header .tags .americano {
     white-space: nowrap;
     text-align: center;
 }
+
+
 
 
 @media (max-width: 576px) {
