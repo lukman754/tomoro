@@ -132,20 +132,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.querySelectorAll(".tag").forEach(tag => {
     tag.addEventListener("click", function () {
-        const tagText = this.innerText;
+        const tagText = this.innerText.toLowerCase();
         const searchInput = document.getElementById("search");
-        
-        // Masukkan teks tag ke dalam form search
-        searchInput.value = tagText.toLowerCase();
 
-        // Panggil fungsi pencarian untuk menyaring produk
-        const query = tagText.toLowerCase();
-        const productList = document.querySelectorAll(".product");
+        // Jika teks tag sudah ada di dalam input, hapus teks tersebut
+        if (searchInput.value === tagText) {
+            searchInput.value = ""; // Kosongkan input search
 
-        productList.forEach(product => {
-            const isVisible = product.innerText.toLowerCase().includes(query);
-            product.style.display = isVisible ? "block" : "none";
-        });
+            // Tampilkan kembali semua produk
+            document.querySelectorAll(".product").forEach(product => {
+                product.style.display = "block";
+            });
+        } else {
+            // Jika teks belum ada, masukkan teks tag ke dalam input
+            searchInput.value = tagText;
+
+            // Panggil fungsi pencarian untuk menyaring produk
+            const query = tagText;
+            const productList = document.querySelectorAll(".product");
+
+            productList.forEach(product => {
+                const isVisible = product.innerText.toLowerCase().includes(query);
+                product.style.display = isVisible ? "block" : "none";
+            });
+        }
     });
 });
 
