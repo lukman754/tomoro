@@ -101,6 +101,31 @@ h2 {
     background-color: #ddd;
 }
 
+.matcha{
+    background-color: #658147;
+    color: white;
+}
+
+.oat{
+    background-color: #F6DCAC;
+    color: #603F26;
+}
+
+.latte{
+    background-color: #914F1E;
+    color: white;
+}
+
+.choco{
+    background-color: #603F26;
+    color: white;
+}
+
+.americano{
+    background-color: #8D493A;
+    color: white;
+}
+
 
 @media (max-width: 576px) {
     .product-image {
