@@ -130,8 +130,16 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCart(); // Perbarui tampilan keranjang
     }
 
-    document.getElementById("search").addEventListener("input", function () {
-        const query = this.value.toLowerCase();
+    document.querySelectorAll(".tag").forEach(tag => {
+    tag.addEventListener("click", function () {
+        const tagText = this.innerText;
+        const searchInput = document.getElementById("search");
+        
+        // Masukkan teks tag ke dalam form search
+        searchInput.value = tagText.toLowerCase();
+
+        // Panggil fungsi pencarian untuk menyaring produk
+        const query = tagText.toLowerCase();
         const productList = document.querySelectorAll(".product");
 
         productList.forEach(product => {
@@ -139,6 +147,17 @@ document.addEventListener("DOMContentLoaded", function () {
             product.style.display = isVisible ? "block" : "none";
         });
     });
+});
+
+document.getElementById("search").addEventListener("input", function () {
+    const query = this.value.toLowerCase();
+    const productList = document.querySelectorAll(".product");
+
+    productList.forEach(product => {
+        const isVisible = product.innerText.toLowerCase().includes(query);
+        product.style.display = isVisible ? "block" : "none";
+    });
+});
 
     const filterButtons = document.querySelectorAll(".filters button");
     filterButtons.forEach(button => {
