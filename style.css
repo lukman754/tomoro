@@ -82,6 +82,30 @@ h2 {
     margin-right: 10px;
 }
 
+.tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .tag {
+            padding: 5px 15px;
+            background-color: #f1f1f1;
+            border-radius: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+        }
+        .tag:hover {
+            background-color: #e0e0e0;
+        }
+        .search-bar {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
 
 @media (max-width: 576px) {
     .product-image {
