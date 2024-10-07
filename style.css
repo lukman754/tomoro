@@ -93,7 +93,7 @@ h2 {
     background-color: #f1f1f1;
     border-radius: 20px;
     padding: 10px 15px;
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
 }
 
@@ -117,7 +117,7 @@ header .tags .latte {
 }
 
 header .tags .aren {
-    background-color: ##91371e;
+    background-color: #91371e;
     color: white;
 }
 
