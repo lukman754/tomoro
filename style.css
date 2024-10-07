@@ -116,6 +116,11 @@ header .tags .latte {
     color: white;
 }
 
+header .tags .aren {
+    background-color: ##91371e;
+    color: white;
+}
+
 header .tags .choco {
     background-color: #603F26;
     color: white;
