@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         <img src="${product.image}" alt="${product.name}" class="product-image" style="width: 80px; height: 80px" />
                     </div>
                     <div class="col-7 col-lg-8">
-                        <h5 class="fs-5 pt-2">${product.name}</h5>
+                        <h5 class="pt-2">${product.name}</h5>
                         ${priceDisplay}
                     </div>
                     <div class="col-2 d-flex justify-content-end align-items-end">
@@ -131,43 +131,54 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     document.querySelectorAll(".tag").forEach(tag => {
-    tag.addEventListener("click", function () {
-        const tagText = this.innerText.toLowerCase();
-        const searchInput = document.getElementById("search");
+        tag.addEventListener("click", function () {
+            const tagText = this.innerText.toLowerCase().trim();
+            const searchInput = document.getElementById("search");
 
-        // Jika teks tag sudah ada di dalam input, hapus teks tersebut
-        if (searchInput.value === tagText) {
-            searchInput.value = ""; // Kosongkan input search
+            // Jika tag yang sama sudah aktif (di dalam input), hilangkan filter dan tampilkan semua produk
+            if (searchInput.value === tagText) {
+                searchInput.value = ""; // Kosongkan input search
 
-            // Tampilkan kembali semua produk
-            document.querySelectorAll(".product").forEach(product => {
-                product.style.display = "block";
-            });
-        } else {
-            // Jika teks belum ada, masukkan teks tag ke dalam input
-            searchInput.value = tagText;
+                // Klik kategori "⭐ SEMUA" untuk menampilkan semua produk
+                document.querySelector('.category[data-filter="*"]').click();
 
-            // Panggil fungsi pencarian untuk menyaring produk
-            const query = tagText;
-            const productList = document.querySelectorAll(".product");
+                // Tampilkan semua produk kembali
+                document.querySelectorAll(".product").forEach(product => {
+                    product.style.display = "block"; // Tampilkan kembali semua produk
+                });
 
-            productList.forEach(product => {
-                const isVisible = product.innerText.toLowerCase().includes(query);
-                product.style.display = isVisible ? "block" : "none";
-            });
-        }
+            } else {
+                // Jika tag belum ada di dalam input, masukkan teks tag ke dalam input pencarian
+                searchInput.value = tagText;
+
+                // Simulasikan klik pada kategori "⭐ SEMUA" terlebih dahulu
+                document.querySelector('.category[data-filter="*"]').click();
+
+                // Tunda sedikit untuk menunggu semua produk ditampilkan
+                setTimeout(() => {
+                    // Filter produk yang sesuai dengan tag yang diklik
+                    const query = tagText;
+                    const productList = document.querySelectorAll(".product");
+
+                    productList.forEach(product => {
+                        const isVisible = product.innerText.toLowerCase().includes(query);
+                        product.style.display = isVisible ? "block" : "none";
+                    });
+                }, 100); // Tunggu 100ms setelah klik kategori "SEMUA"
+            }
+        });
     });
-});
 
-document.getElementById("search").addEventListener("input", function () {
-    const query = this.value.toLowerCase();
-    const productList = document.querySelectorAll(".product");
 
-    productList.forEach(product => {
-        const isVisible = product.innerText.toLowerCase().includes(query);
-        product.style.display = isVisible ? "block" : "none";
+    document.getElementById("search").addEventListener("input", function () {
+        const query = this.value.toLowerCase();
+        const productList = document.querySelectorAll(".product");
+
+        productList.forEach(product => {
+            const isVisible = product.innerText.toLowerCase().includes(query);
+            product.style.display = isVisible ? "block" : "none";
+        });
     });
-});
 
     const filterButtons = document.querySelectorAll(".filters button");
     filterButtons.forEach(button => {
