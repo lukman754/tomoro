@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     function sendWhatsAppMessage(name, location) {
-        const message = cart.map(item => `${item.name} - ${item.quantity}x`).join('%0A');
+        const message = cart.map(item => `${item.name} - ${item.quantity}x ${formatRupiah(item.price)}`).join('%0A');
         const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
         const finalMessage = `Nama: ${name}%0ALokasi Tomoro: ${location}%0A%0A${message}%0A%0ATotal: ${formatRupiah(total)}`;
         const phoneNumber = "6285156477250"; // Ganti dengan nomor WhatsApp yang dituju
