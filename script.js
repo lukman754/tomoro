@@ -29,6 +29,21 @@ document.addEventListener("DOMContentLoaded", function () {
             const categoryContainer = document.createElement("div");
             categoryContainer.classList.add("category-container");
 
+            // Mapping kategori dari tombol filter ke nama kategori yang ditampilkan
+            const categoryTitles = {
+                "cheese": "🧀 Cheese Latte Series",
+                "coffee": "☕ Coffee",
+                "noncoffee": "🍵 Non Coffee",
+                "peach": "🍑 Peach Series",
+                "shaken": "🥛 Ice Shaken Series",
+                "cloud": "☁️ Cloud Series",
+                "coconut": "🥥 Coconut Series",
+                "frappe": "🧋 Frappe Series"
+            };
+
+            let lastCategory = ""; // Variabel untuk melacak kategori terakhir yang ditampilkan
+
+            // Iterasi melalui produk yang difilter
             filteredProducts.forEach(product => {
                 const productElement = document.createElement("div");
                 productElement.classList.add("product", product.category);
@@ -38,24 +53,35 @@ document.addEventListener("DOMContentLoaded", function () {
                     `<p class="fs-6 text-danger"><span style="text-decoration: line-through; color: gray;">${formatRupiah(product.originalPrice)}</span> ${formatRupiah(product.price)}</p>` :
                     `<p class="fs-6 text-danger">${formatRupiah(product.price)}</p>`;
 
+                // Jika kategori produk berbeda dari yang terakhir, tambahkan judul kategori
+                if (product.category !== lastCategory) {
+                    const categoryTitleElement = document.createElement("h3");
+                    categoryTitleElement.classList.add("category-title", "mt-4", "mb-2");
+                    categoryTitleElement.innerHTML = categoryTitles[product.category] || product.category;
+                    categoryContainer.appendChild(categoryTitleElement);
+                    lastCategory = product.category; // Perbarui kategori terakhir
+                }
+
+                // Buat elemen produk
                 productElement.innerHTML = `
-                <div class="row align-items-center mb-3">
-                    <div class="col-3 col-lg-2">
-                        <img src="${product.image}" alt="${product.name}" class="product-image" style="width: 80px; height: 80px" />
+                    <div class="row align-items-center mb-3">
+                        <div class="col-3 col-lg-2">
+                            <img src="${product.image}" alt="${product.name}" class="product-image" style="width: 80px; height: 80px" />
+                        </div>
+                        <div class="col-7 col-lg-8">
+                            <h5 class="pt-2">${product.name}</h5>
+                            ${priceDisplay}
+                        </div>
+                        <div class="col-2 d-flex justify-content-end align-items-end">
+                            <button class="btn btn-primary rounded-pill btn-sm" data-id="${product.id}">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
                     </div>
-                    <div class="col-7 col-lg-8">
-                        <h5 class="pt-2">${product.name}</h5>
-                        ${priceDisplay}
-                    </div>
-                    <div class="col-2 d-flex justify-content-end align-items-end">
-                        <button class="btn btn-primary rounded-pill btn-sm" data-id="${product.id}">
-                            <i class="fas fa-plus"></i>
-                        </button>
-                    </div>
-                </div>
-            `;
+                    `;
                 categoryContainer.appendChild(productElement);
             });
+
 
             productList.appendChild(categoryContainer);
         });
@@ -98,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
             total += itemTotal;
             totalQuantity += item.quantity;
             cartDiv.innerHTML += `
-                    <div class='row'>
+                    <div class='row mb-1'>
                         <div class='col-7'>${item.name} </div>
                         <div class='col-1'>${item.quantity}x</div>
                         <div class='col-2'>${formatRupiah(itemTotal)}</div>
